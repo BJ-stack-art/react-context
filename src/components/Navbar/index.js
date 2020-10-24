@@ -1,5 +1,7 @@
 import React , {Component} from 'react';
 
+import {ThemeContext} from '../../contexts/ThemeContext.js';
+
 const Style = {
 	menu: {
 		display: 'flex',
@@ -11,9 +13,13 @@ const Style = {
 }
 
 class Navbar extends Component {
+	static contextType = ThemeContext;
+
 	render() {
+		const {isLightTheme , light , dark}  = this.context;
+		const theme = isLightTheme ? light : dark;
 		return(
-			<header>
+			<header className="navbar" style={{background: theme.ui , color: theme.syntax ,  }} >
 				<h1>Context App</h1>
 				<div style={Style.menu} >
 					<span>Home</span>

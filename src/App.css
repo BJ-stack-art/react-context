@@ -35,11 +35,31 @@
 }
 
 .App ul {
-  margin-top: 50px;
   margin-left: -40px;
 }
 
 .App li {
   list-style-type: none;
   margin: 10px auto;
+}
+
+.navbar {
+  width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.book-list  {
+  width: 500px;
+  margin: 0px auto;
+  padding: 20px;
+  margin-top: -20px;
+}
+
+.book-list ul {
+  margin-top: -10px;
+}
+
+.book-list ul li {
+  padding: 10px;
 }
